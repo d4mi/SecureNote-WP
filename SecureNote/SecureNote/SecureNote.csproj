@@ -95,6 +95,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\UserRegistrationViewModel.cs" />
+    <Compile Include="View\TextNoteEditorView.xaml.cs">
+      <DependentUpon>TextNoteEditorView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UserRegistrationView.xaml.cs">
       <DependentUpon>UserRegistrationView.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TextNoteEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UserRegistrationView.xaml">
       <SubType>Designer</SubType>
