@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using SecureNote.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,13 @@ namespace SecureNote.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        #region Properties 
+        #region Fields
+
+        private INavigationService _navigationService;
+
+        #endregion
+
+        #region Properties
 
         private string _title = String.Empty;
         public string Title
@@ -28,8 +35,10 @@ namespace SecureNote.ViewModel
 
         #region Ctor
 
-        public MainViewModel()
+        public MainViewModel(INavigationService navigationService)
         {
+            _navigationService = navigationService;
+
             Title = IsInDesignMode ? "Hello" : "World";
         }
 
