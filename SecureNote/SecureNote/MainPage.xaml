@@ -11,6 +11,14 @@
     DataContext="{Binding MainViewModel, Mode=OneWay, Source={StaticResource Locator}}">
 
     <Grid Margin="10">
-    	<view:UserRegistrationView />
+        <Pivot>
+            <PivotItem Header="Register" >
+                <view:UserRegistrationView />
+            </PivotItem>
+            <PivotItem Header="Note" >
+                <view:TextNoteEditorView/>
+            </PivotItem>
+        </Pivot>
+    	
     </Grid>
 </Page>
