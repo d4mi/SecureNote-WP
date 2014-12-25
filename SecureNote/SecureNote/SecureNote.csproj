@@ -80,7 +80,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -93,7 +92,13 @@
     <Compile Include="Model\Note.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\CryptoProvider.cs" />
+    <Compile Include="Security\BinaryData.cs" />
+    <Compile Include="Security\Encryptions\AesEncryption.cs" />
+    <Compile Include="Service\Implementation\NavigationService.cs" />
+    <Compile Include="Service\Interface\INavigationService.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\TextNoteEditorViewModel.cs" />
     <Compile Include="ViewModel\UserRegistrationViewModel.cs" />
     <Compile Include="View\TextNoteEditorView.xaml.cs">
       <DependentUpon>TextNoteEditorView.xaml</DependentUpon>
