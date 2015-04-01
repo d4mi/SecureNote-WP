@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using SecureNote.DAL;
 using SecureNote.Model;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,8 @@ namespace SecureNote.Desktop.ViewModel
         #region Ctor
         public NotesCatalogViewModel()
         {
-               
+               NotesRepository repository = new NotesRepository();
+               _notes = new ObservableCollection<Note>(repository.GetAll());
         }
 
         #endregion
