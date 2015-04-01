@@ -64,6 +64,8 @@ namespace SecureNote.Model
 
         public Note()
         {
+            Title = String.Empty;
+            Text = String.Empty;
 
         }
         

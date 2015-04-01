@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{51424790-1B58-429D-AFE1-CF7F5D980582}</ProjectGuid>
+    <ProjectGuid>{65753874-0564-4848-B392-EF1D68F914FE}</ProjectGuid>
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SecureNote.Model</RootNamespace>
-    <AssemblyName>SecureNote.Model</AssemblyName>
+    <RootNamespace>SecureNote.DAL</RootNamespace>
+    <AssemblyName>SecureNote.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -47,10 +47,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Note.cs" />
-    <Compile Include="Model\User.cs" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="NotesRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -73,6 +70,12 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SecureNote.Model\SecureNote.Model.csproj">
+      <Project>{51424790-1b58-429d-afe1-cf7f5d980582}</Project>
+      <Name>SecureNote.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

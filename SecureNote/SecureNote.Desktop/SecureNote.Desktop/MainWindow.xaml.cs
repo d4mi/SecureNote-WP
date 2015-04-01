@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using SecureNote.Desktop.ViewModel;
+using SecureNote.Desktop.Utils;
 
 namespace SecureNote.Desktop
 {

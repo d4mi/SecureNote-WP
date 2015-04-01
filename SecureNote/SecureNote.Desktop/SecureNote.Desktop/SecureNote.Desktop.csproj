@@ -70,11 +70,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Utils\ViewModelLocator.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\NoteEditViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="ViewModel\NotesCatalogViewModel.cs" />
     <Compile Include="View\NoteEditView.xaml.cs">
       <DependentUpon>NoteEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NotesCatalogView.xaml.cs">
+      <DependentUpon>NotesCatalogView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -90,6 +94,10 @@
     </Compile>
     <Page Include="View\NoteEditView.xaml">
       <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NotesCatalogView.xaml">
+      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -122,6 +130,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\SecureNote.DAL\SecureNote.DAL.csproj">
+      <Project>{65753874-0564-4848-b392-ef1d68f914fe}</Project>
+      <Name>SecureNote.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\SecureNote.Model\SecureNote.Model.csproj">
       <Project>{51424790-1b58-429d-afe1-cf7f5d980582}</Project>
       <Name>SecureNote.Model</Name>

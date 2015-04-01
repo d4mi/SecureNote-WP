@@ -4,13 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ignore="http://www.ignore.com"
-        mc:Ignorable="d ignore" >
+        mc:Ignorable="d ignore"
+        DataContext="{Binding NoteEditViewModel, Source={StaticResource Locator}}"
+        >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -21,6 +24,10 @@
         
         <Label Grid.Row="1" Grid.Column="0" Content="Content" />
         <TextBox Grid.Row="1" Grid.Column="1" />
+        
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" >
+            <Button Content="Add" Command="{Binding AddNoteCommand}" />
+        </Grid>
         
     </Grid>
 </UserControl>
