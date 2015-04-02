@@ -16,7 +16,9 @@ namespace SecureNote.Desktop.Utils
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<NoteEditViewModel>();
-
+            SimpleIoc.Default.Register<NotesCatalogViewModel>();
+            SimpleIoc.Default.Register<PagePasswordsViewModel>();
+            SimpleIoc.Default.Register<AddWebPageViewModel>();
         }
 
         public MainViewModel MainViewModel
@@ -32,6 +34,30 @@ namespace SecureNote.Desktop.Utils
             get
             {
                 return ServiceLocator.Current.GetInstance<NoteEditViewModel>();
+            }
+        }
+
+        public NotesCatalogViewModel NotesCatalogViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<NotesCatalogViewModel>();
+            }
+        }
+
+        public PagePasswordsViewModel PagePasswordsViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<PagePasswordsViewModel>();
+            }
+        }
+
+        public AddWebPageViewModel AddWebPageViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<AddWebPageViewModel>();
             }
         }
 

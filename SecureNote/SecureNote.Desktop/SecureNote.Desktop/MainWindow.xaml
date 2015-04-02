@@ -11,14 +11,23 @@
         Title="SecureNote"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
 
-    <Grid >
-        <ScrollViewer>
-            <StackPanel>
+    <Grid >      
+        <TabControl>
+            <TabItem Header="Add">
                 <v:NoteEditView />
-            </StackPanel>
-        </ScrollViewer>
-    </Grid>
+            </TabItem>
+            <TabItem Header="Browse">
+                <v:NotesCatalogView />
+            </TabItem>
+            <TabItem Header="Pages">
+                <v:PagePasswordsView />
+            </TabItem>
+            <TabItem Header="Pages">
+                <v:AddWebPageView />
+            </TabItem>
 
-    
+        </TabControl>
+        
+    </Grid>  
 
 </Window>

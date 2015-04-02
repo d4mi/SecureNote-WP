@@ -4,8 +4,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             DataContext="{Binding NotesCatalogViewModel, Source={StaticResource Locator}}">
     <Grid>
-        
-    </Grid>
+        <ListView ItemsSource="{Binding Notes}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="/Images/note.ico" Margin="0,0,10,0"/>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="{Binding Path=Title}" FontSize="14" FontWeight="Bold" />
+                            <TextBlock Grid.Row="1" Text="{Binding Path=Text}" FontSize="12" />
+                        </Grid>
+                    </Grid>                   
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+   </Grid>
 </UserControl>

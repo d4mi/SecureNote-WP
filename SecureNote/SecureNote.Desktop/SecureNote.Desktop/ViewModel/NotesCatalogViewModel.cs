@@ -23,6 +23,10 @@ namespace SecureNote.Desktop.ViewModel
         public NotesCatalogViewModel()
         {
                NotesRepository repository = new NotesRepository();
+               repository.Add(new Note() { Text = "Hello world", Title = "First note" });
+               repository.Add(new Note() { Text = "Hello world", Title = "Second note" });
+               repository.Add(new Note() { Text = "Hello world", Title = "Third note" });
+
                _notes = new ObservableCollection<Note>(repository.GetAll());
         }
 

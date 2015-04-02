@@ -71,14 +71,25 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Utils\ViewModelLocator.cs" />
+    <Compile Include="ViewModel\AddWebPageViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\NoteEditViewModel.cs" />
     <Compile Include="ViewModel\NotesCatalogViewModel.cs" />
+    <Compile Include="ViewModel\PagePasswordsViewModel.cs" />
+    <Compile Include="View\AboutViewModel.xaml.cs">
+      <DependentUpon>AboutViewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddWebPageView.xaml.cs">
+      <DependentUpon>AddWebPageView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\NoteEditView.xaml.cs">
       <DependentUpon>NoteEditView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\NotesCatalogView.xaml.cs">
       <DependentUpon>NotesCatalogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PagePasswordsView.xaml.cs">
+      <DependentUpon>PagePasswordsView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -92,11 +103,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\AboutViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddWebPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\NoteEditView.xaml">
       <SubType>Form</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\NotesCatalogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PagePasswordsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,6 +161,14 @@
       <Project>{51424790-1b58-429d-afe1-cf7f5d980582}</Project>
       <Name>SecureNote.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\SecureNote.Service\SecureNote.Service.csproj">
+      <Project>{464547aa-9b3d-452f-8b09-ec4f48c3826d}</Project>
+      <Name>SecureNote.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\note.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
