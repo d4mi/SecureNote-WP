@@ -19,6 +19,7 @@ namespace SecureNote.Desktop.Utils
             SimpleIoc.Default.Register<NotesCatalogViewModel>();
             SimpleIoc.Default.Register<PagePasswordsViewModel>();
             SimpleIoc.Default.Register<AddWebPageViewModel>();
+            SimpleIoc.Default.Register<SettingsViewModel>();
         }
 
         public MainViewModel MainViewModel
@@ -58,6 +59,14 @@ namespace SecureNote.Desktop.Utils
             get
             {
                 return ServiceLocator.Current.GetInstance<AddWebPageViewModel>();
+            }
+        }
+
+        public SettingsViewModel SettingsViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<SettingsViewModel>();
             }
         }
 
