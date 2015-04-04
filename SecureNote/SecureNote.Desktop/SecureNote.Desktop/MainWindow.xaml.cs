@@ -17,8 +17,6 @@ namespace SecureNote.Desktop
         {
             InitializeComponent();
 
-            DatabaseAccessor db = new DatabaseAccessor();
-
             Closing += (s, e) => ViewModelLocator.Cleanup();
         }
     }

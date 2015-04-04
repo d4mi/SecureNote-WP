@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
+using SecureNote.DAL;
 using SecureNote.Desktop.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,10 @@ namespace SecureNote.Desktop.Utils
             SimpleIoc.Default.Register<SettingsViewModel>();
             SimpleIoc.Default.Register<AddDocumentViewModel>();
             SimpleIoc.Default.Register<CreditCardInfoViewModel>();
+            SimpleIoc.Default.Register<SQLiteDatabaseAccessor>();
         }
+
+        #region ViewModels
 
         public MainViewModel MainViewModel
         {
@@ -87,6 +91,25 @@ namespace SecureNote.Desktop.Utils
                 return ServiceLocator.Current.GetInstance<CreditCardInfoViewModel>();
             }
         }
+
+        #endregion // ViewModels
+
+
+        #region Services 
+
+        #endregion
+
+        #region DAL
+
+        public IUnitOfWork IUnitOfWork
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<IUnitOfWork>();
+            }
+        }
+
+        #endregion
 
         public static void Cleanup()
         {

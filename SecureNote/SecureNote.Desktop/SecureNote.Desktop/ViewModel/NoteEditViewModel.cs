@@ -69,8 +69,6 @@ namespace SecureNote.Desktop.ViewModel
                         _addNoteCommand = new RelayCommand(
                             () => 
                             {
-                                NotesRepository repository = new NotesRepository();
-                                repository.Add(_note);
                                 _note = new Note();
                             },
                             null
