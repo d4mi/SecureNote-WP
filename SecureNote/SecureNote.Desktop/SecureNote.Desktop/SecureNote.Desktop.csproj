@@ -16,7 +16,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -71,16 +71,25 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Utils\ViewModelLocator.cs" />
+    <Compile Include="ViewModel\AddDocumentViewModel.cs" />
     <Compile Include="ViewModel\AddWebPageViewModel.cs" />
+    <Compile Include="ViewModel\CreditCardInfoViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\NoteEditViewModel.cs" />
     <Compile Include="ViewModel\NotesCatalogViewModel.cs" />
     <Compile Include="ViewModel\PagePasswordsViewModel.cs" />
+    <Compile Include="ViewModel\SettingsViewModel.cs" />
     <Compile Include="View\AboutViewModel.xaml.cs">
       <DependentUpon>AboutViewModel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AddDocumentView.xaml.cs">
+      <DependentUpon>AddDocumentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AddWebPageView.xaml.cs">
       <DependentUpon>AddWebPageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreditCardInfoView.xaml.cs">
+      <DependentUpon>CreditCardInfoView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\NoteEditView.xaml.cs">
       <DependentUpon>NoteEditView.xaml</DependentUpon>
@@ -90,6 +99,9 @@
     </Compile>
     <Compile Include="View\PagePasswordsView.xaml.cs">
       <DependentUpon>PagePasswordsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -107,7 +119,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AddDocumentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AddWebPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CreditCardInfoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -120,6 +140,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PagePasswordsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

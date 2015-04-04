@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using SecureNote.Desktop.ViewModel;
 using SecureNote.Desktop.Utils;
+using SecureNote.DAL;
 
 namespace SecureNote.Desktop
 {
@@ -15,6 +16,9 @@ namespace SecureNote.Desktop
         public MainWindow()
         {
             InitializeComponent();
+
+            DatabaseAccessor db = new DatabaseAccessor();
+
             Closing += (s, e) => ViewModelLocator.Cleanup();
         }
     }

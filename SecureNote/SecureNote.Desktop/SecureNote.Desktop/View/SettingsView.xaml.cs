@@ -23,6 +23,18 @@ namespace SecureNote.Desktop.View
         public SettingsView()
         {
             InitializeComponent();
+            wb.Navigate(new Uri("http://www.google.pl"));
+
+            System.Threading.Thread.Sleep(1000);
+
+            RenderTargetBitmap bmp = new RenderTargetBitmap(1024, 1024, 100, 100, PixelFormats.Default);
+
+            bmp.Render(wb);
+
+            Image image = new Image();
+            image.Source = bmp;
+
+            im = image;
         }
     }
 }

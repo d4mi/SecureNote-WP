@@ -20,6 +20,8 @@ namespace SecureNote.Desktop.Utils
             SimpleIoc.Default.Register<PagePasswordsViewModel>();
             SimpleIoc.Default.Register<AddWebPageViewModel>();
             SimpleIoc.Default.Register<SettingsViewModel>();
+            SimpleIoc.Default.Register<AddDocumentViewModel>();
+            SimpleIoc.Default.Register<CreditCardInfoViewModel>();
         }
 
         public MainViewModel MainViewModel
@@ -67,6 +69,22 @@ namespace SecureNote.Desktop.Utils
             get
             {
                 return ServiceLocator.Current.GetInstance<SettingsViewModel>();
+            }
+        }
+
+        public AddDocumentViewModel AddDocumentViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<AddDocumentViewModel>();
+            }
+        }
+
+        public CreditCardInfoViewModel CreditCardInfoViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<CreditCardInfoViewModel>();
             }
         }
 

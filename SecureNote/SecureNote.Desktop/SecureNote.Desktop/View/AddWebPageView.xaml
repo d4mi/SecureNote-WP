@@ -13,7 +13,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         
-        <Border BorderThickness="1" Grid.Column="0" Height="128" Width="128" />
+        <Image Source="{Binding Thumb}" Height="200" Width="200" />
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />

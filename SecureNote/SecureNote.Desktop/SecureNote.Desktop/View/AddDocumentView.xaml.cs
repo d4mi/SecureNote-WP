@@ -16,13 +16,13 @@ using System.Windows.Shapes;
 namespace SecureNote.Desktop.View
 {
     /// <summary>
-    /// Interaction logic for AddWebPageView.xaml
+    /// Interaction logic for AddDocumentView.xaml
     /// </summary>
-    public partial class AddWebPageView : UserControl
+    public partial class AddDocumentView : UserControl
     {
-        public AddWebPageView()
+        public AddDocumentView()
         {
-            InitializeComponent();       
+            InitializeComponent();
         }
     }
 }

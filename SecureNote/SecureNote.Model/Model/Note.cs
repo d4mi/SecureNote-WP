@@ -18,6 +18,8 @@ namespace SecureNote.Model
 
         #region Properties
 
+        public Guid Id { get; set; }
+
         public string Text
         {
             get
@@ -30,7 +32,7 @@ namespace SecureNote.Model
                 _text = value;
             }
         }
-        
+
         public string Title
         {
             get 
@@ -43,7 +45,7 @@ namespace SecureNote.Model
                 _title = value;
             }
         }
-        
+
         public DateTime? DateCreated
         {
             get

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace SecureNote.Desktop.ViewModel
 {
@@ -13,7 +14,7 @@ namespace SecureNote.Desktop.ViewModel
     {
         #region Fields
 
-        private Page _page = new Page();
+        private SecureNote.Model.Model.Page _page = new SecureNote.Model.Model.Page();
 
         #endregion
 
@@ -22,7 +23,7 @@ namespace SecureNote.Desktop.ViewModel
         public AddWebPageViewModel()
         {
             WebsiteScreenshot w = new WebsiteScreenshot();
-            w.GetPage("");
+            Thumb = w.GetPage("");
         }
        
         #endregion
@@ -57,6 +58,22 @@ namespace SecureNote.Desktop.ViewModel
                 {
                     _page.Url = value;
                     base.RaisePropertyChanged(() => Url);
+                }
+            }
+        }
+
+        public Image Thumb
+        {
+            get
+            {
+                return _page.Thumb;
+            }
+            set
+            {
+                if( _page.Thumb != value )
+                {
+                    _page.Thumb = value;
+                    base.RaisePropertyChanged(() => Thumb);
                 }
             }
         }
