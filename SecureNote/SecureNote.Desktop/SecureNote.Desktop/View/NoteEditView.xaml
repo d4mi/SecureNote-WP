@@ -16,16 +16,20 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0" Content="Title" />
-        <TextBox Grid.Row="0" Grid.Column="1" />
-        
-        <Label Grid.Row="1" Grid.Column="0" Content="Content" />
-        <TextBox Grid.Row="1" Grid.Column="1" />
-        
-        <Grid Grid.Row="2" Grid.ColumnSpan="2" >
+        <Label Grid.Row="0" Grid.Column="0" Content="Title" Margin="1" />
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="1" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Content" Margin="1" />
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="1" />
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Category" Margin="1" />
+        <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding NoteTypes}" Margin="1" />
+
+        <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="1" >
             <Button Content="Add" Command="{Binding AddNoteCommand}" />
         </Grid>
         

@@ -23,7 +23,8 @@ namespace SecureNote.Desktop.Utils
             SimpleIoc.Default.Register<SettingsViewModel>();
             SimpleIoc.Default.Register<AddDocumentViewModel>();
             SimpleIoc.Default.Register<CreditCardInfoViewModel>();
-            SimpleIoc.Default.Register<SQLiteDatabaseAccessor>();
+            SimpleIoc.Default.Register<IUnitOfWork ,SQLiteDatabaseAccessor>();
+            SimpleIoc.Default.Register<DatabaseUnitOfWork>();
         }
 
         #region ViewModels
@@ -108,6 +109,15 @@ namespace SecureNote.Desktop.Utils
                 return ServiceLocator.Current.GetInstance<IUnitOfWork>();
             }
         }
+
+        public DatabaseUnitOfWork DatabaseUnitOfWork
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<DatabaseUnitOfWork>();
+            }
+        }
+
 
         #endregion
 

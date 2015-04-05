@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using SecureNote.DAL;
+using SecureNote.Desktop.Utils;
 using SecureNote.Model;
 using System;
 using System.Collections.Generic;
@@ -15,15 +16,17 @@ namespace SecureNote.Desktop.ViewModel
         #region Fields
 
         private ObservableCollection<Note> _notes = new ObservableCollection<Note>();
-
+        
         #endregion
 
 
         #region Ctor
-        public NotesCatalogViewModel()
+        public NotesCatalogViewModel(DatabaseUnitOfWork db)
         {
-
-               _notes = new ObservableCollection<Note>();
+            List<Note> notes = db.Notes.ToList();
+            _notes = new ObservableCollection<Note>(notes);
+            //notes.Add(new Note { Title = "dodane" });
+            //db.SubmitChanges();
         }
 
         #endregion

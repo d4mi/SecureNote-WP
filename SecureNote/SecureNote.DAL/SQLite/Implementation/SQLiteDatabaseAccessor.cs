@@ -11,12 +11,10 @@ namespace SecureNote.DAL
 {
     public class SQLiteDatabaseAccessor : IUnitOfWork
     {
-
         #region Fields
 
         private SQLiteConnection _database;
-
-
+        
         #endregion
 
         #region Ctor
@@ -46,7 +44,7 @@ namespace SecureNote.DAL
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _database.Dispose();
         }
 
         #endregion

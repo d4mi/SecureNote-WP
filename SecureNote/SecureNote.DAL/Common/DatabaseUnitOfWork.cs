@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SecureNote.DAL
 {
-    public class DatabaseUnitOfWork : IDisposable
+       public class DatabaseUnitOfWork : IDisposable
     {
         #region Fields
 

@@ -1,6 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using SecureNote.DAL;
+using SecureNote.Desktop.Utils;
 using SecureNote.Model;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace SecureNote.Desktop.ViewModel
         #region Fields
 
         private Note _note = new Note();
+        private NoteTypeToString _noteTypeToString = new NoteTypeToString();
 
         #endregion
 
@@ -51,6 +53,14 @@ namespace SecureNote.Desktop.ViewModel
                     _note.Text = value;
                     RaisePropertyChanged(() => Text);
                 }
+            }
+        }
+
+        public List<string> NoteTypes
+        {
+            get
+            {
+                return _noteTypeToString.Values.ToList();
             }
         }
 

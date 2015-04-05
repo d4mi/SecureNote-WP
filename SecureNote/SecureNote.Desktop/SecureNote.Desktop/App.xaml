@@ -2,13 +2,57 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:utils="clr-namespace:SecureNote.Desktop.Utils"
+             xmlns:v="clr-namespace:SecureNote.Desktop.View"
+             xmlns:vm="clr-namespace:SecureNote.Desktop.ViewModel"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
              StartupUri="MainWindow.xaml"
              mc:Ignorable="d"
              >
+    
     <Application.Resources>
-        <utils:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
-    </Application.Resources>         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Green.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <System:Double x:Key="WindowTitleFontSize">12</System:Double>
+            <FontFamily x:Key="HeaderFontFamily">Segoe UI</FontFamily>
+            <utils:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
 
+
+            <DataTemplate DataType="{x:Type vm:AddDocumentViewModel}">
+                <v:AddDocumentView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:AddWebPageViewModel}">
+                <v:AddWebPageView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:CreditCardInfoViewModel}">
+                <v:CreditCardInfoView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:NotesCatalogViewModel}">
+                <v:NotesCatalogView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:NoteEditViewModel}">
+                <v:NoteEditView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:PagePasswordsViewModel}">
+                <v:PagePasswordsView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+                <v:SettingsView />
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources> 
 </Application>
