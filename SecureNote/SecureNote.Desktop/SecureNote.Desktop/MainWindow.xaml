@@ -20,6 +20,7 @@
         EnableDWMDropShadow="True"
         WindowStartupLocation="CenterScreen"
         WindowTransitionsEnabled="False"
+        Style="{DynamicResource CleanWindowStyleKey}"
     >
    
     <Controls:MetroWindow.RightWindowCommands>
