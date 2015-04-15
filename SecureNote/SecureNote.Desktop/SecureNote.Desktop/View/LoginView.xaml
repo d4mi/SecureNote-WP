@@ -43,9 +43,10 @@
             <Label Grid.Row="0" Content="Login" FontSize="10" />
             <TextBox Grid.Row="1" />
             <Label Grid.Row="2" Content="Password" FontSize="10" />
-            <PasswordBox Grid.Row="3" />
+            <PasswordBox Name="PasswordBox" Grid.Row="3" />
 
-            <Button Margin="0,15,0,0" Grid.Row="4" Content="Sign in" Command="{Binding SignInCommand}" />
+            <Button Margin="0,15,0,0" Grid.Row="4" Content="Sign in" Command="{Binding SignInCommand}"
+                     CommandParameter="{Binding ElementName=PasswordBox}"/>
 
             <Button Margin="0,15,0,0" Grid.Row="5" Content="Create account" Command="{Binding SignUpCommand}" />
         </Grid>

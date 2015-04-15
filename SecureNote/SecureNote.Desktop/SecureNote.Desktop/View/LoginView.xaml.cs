@@ -24,5 +24,13 @@ namespace SecureNote.Desktop.View
         {
             InitializeComponent();
         }
+
+        public string Password
+        {
+            get
+            {
+                return this.PasswordBox.Password;
+            }
+        }
     }
 }

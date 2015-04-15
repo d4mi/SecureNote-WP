@@ -79,6 +79,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\PasswordBoxesConverter.cs" />
     <Compile Include="Utils\NoteTypeToString.cs" />
     <Compile Include="Utils\ViewEntry.cs" />
     <Compile Include="Utils\ViewModelLocator.cs" />

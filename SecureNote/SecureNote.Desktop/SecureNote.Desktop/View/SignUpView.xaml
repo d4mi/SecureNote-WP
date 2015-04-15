@@ -3,9 +3,71 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c="clr-namespace:SecureNote.Desktop.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
+    <UserControl.Resources>
+        <c:PasswordBoxesConverter x:Key="PasswordBoxesConverter" />
+    </UserControl.Resources>
+    
+    <Grid Margin="0,70,0,0" HorizontalAlignment="Center" Width="200">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0" Width="128" Height="128" Source="/Images/money.png" />
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center"
+                       Margin="5,0,0,0"
+                       Text="Secure Note"
+                       Foreground="White"
+                       FontWeight="Bold"
+                       FontSize="20"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0,15,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="Login" FontSize="10" />
+            <TextBox Grid.Row="1" />
+            <Label Grid.Row="2" Content="Password" FontSize="10" />
+            <PasswordBox Name="PasswordBoxFirst" Grid.Row="3" />
+            <Label Grid.Row="4" Content="Repeat password" FontSize="10" />
+            <PasswordBox Name="PasswordBoxSecond" Grid.Row="5" />
+
+            <TextBlock Grid.Row="6" Text="{Binding ErrorMessage}" FontWeight="Bold" Foreground="Red" />
+
+            <Button Margin="0,15,0,0" Grid.Row="7" Content="Sign up" Command="{Binding SignInCommand}">
+                <Button.CommandParameter>
+                    <MultiBinding Converter="{StaticResource PasswordBoxesConverter}">
+                        <Binding ElementName="PasswordBoxFirst" />
+                        <Binding ElementName="PasswordBoxSecond" />
+                    </MultiBinding>
+                </Button.CommandParameter>
+            </Button>            
+            <Button Margin="0,15,0,0" Grid.Row="8" Content="Cancel" Command="{Binding SignUpCommand}" />
+        </Grid>
     </Grid>
 </UserControl>

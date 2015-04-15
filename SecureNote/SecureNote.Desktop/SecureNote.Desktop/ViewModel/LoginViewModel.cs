@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace SecureNote.Desktop.ViewModel
@@ -56,9 +57,10 @@ namespace SecureNote.Desktop.ViewModel
             {
                 return _signInCommand ??
                     (
-                        new RelayCommand(
-                            () =>
+                        new RelayCommand<PasswordBox>(
+                            (passwordBox) =>
                             {
+                                System.Windows.MessageBox.Show(passwordBox.Password);
                                 if( UserSignedInEvent != null )
                                 {
                                     UserSignedInEvent(this, null);
