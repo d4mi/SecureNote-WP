@@ -15,7 +15,7 @@
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Source="/Images/note.ico" Margin="0,0,10,0"/>
+                        <Image Grid.Column="0" Source="/Images/note.png" Width="48" Height="48" Margin="0,0,10,0"/>
                         <Grid Grid.Column="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />

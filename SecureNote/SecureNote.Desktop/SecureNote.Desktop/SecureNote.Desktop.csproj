@@ -85,11 +85,14 @@
     <Compile Include="ViewModel\AddDocumentViewModel.cs" />
     <Compile Include="ViewModel\AddWebPageViewModel.cs" />
     <Compile Include="ViewModel\CreditCardInfoViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\NoteEditViewModel.cs" />
     <Compile Include="ViewModel\NotesCatalogViewModel.cs" />
     <Compile Include="ViewModel\PagePasswordsViewModel.cs" />
     <Compile Include="ViewModel\SettingsViewModel.cs" />
+    <Compile Include="ViewModel\SignUpViewModel.cs" />
     <Compile Include="View\AboutViewModel.xaml.cs">
       <DependentUpon>AboutViewModel.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,12 @@
     <Compile Include="View\CreditCardInfoView.xaml.cs">
       <DependentUpon>CreditCardInfoView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\NoteEditView.xaml.cs">
       <DependentUpon>NoteEditView.xaml</DependentUpon>
     </Compile>
@@ -113,6 +122,9 @@
     </Compile>
     <Compile Include="View\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SignUpView.xaml.cs">
+      <DependentUpon>SignUpView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserPanelBarView.xaml.cs">
       <DependentUpon>UserPanelBarView.xaml</DependentUpon>
@@ -145,6 +157,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\NoteEditView.xaml">
       <SubType>Form</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -158,6 +178,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SignUpView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -209,9 +233,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\note.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\search.png" />
   </ItemGroup>
   <ItemGroup>
@@ -246,6 +267,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\photosDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />

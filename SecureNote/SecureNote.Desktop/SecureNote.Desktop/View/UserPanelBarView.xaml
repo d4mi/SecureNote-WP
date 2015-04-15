@@ -21,7 +21,7 @@
 
             <Border Grid.Column="0" 
                     Height="24"
-                    Width="120"
+                    Width="200"
                     Padding="3" 
                     CornerRadius="10" 
                     BorderThickness="1" 

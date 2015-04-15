@@ -12,6 +12,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
@@ -28,5 +29,7 @@
 
         <Label Grid.Row="2" Grid.Column="0" Content="Confidential" />
         <ComboBox Grid.Row="2" Grid.Column="1" />
+
+        <Button Grid.Row="3" Command="{Binding BrowseFileCommand}" />
     </Grid>
 </UserControl>

@@ -18,7 +18,7 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Clean/CleanWindow.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Green.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Orange.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <System:Double x:Key="WindowTitleFontSize">12</System:Double>
@@ -52,6 +52,18 @@
 
             <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
                 <v:SettingsView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:LoginViewModel}">
+                <v:LoginView />
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type vm:MainViewModel}">
+                <v:MainView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:SignUpViewModel}">
+                <v:SignUpView />
             </DataTemplate>
 
         </ResourceDictionary>

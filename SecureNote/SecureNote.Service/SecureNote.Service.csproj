@@ -47,7 +47,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\FileBrowserDialog.cs" />
     <Compile Include="Implementation\WebsiteScreenshot.cs" />
+    <Compile Include="Interface\IFileBrowserDialog.cs" />
     <Compile Include="Interface\IWebsiteScreenshoot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

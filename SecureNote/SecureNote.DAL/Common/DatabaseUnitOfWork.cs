@@ -26,14 +26,14 @@ namespace SecureNote.DAL
 
         #region Properties
 
-        public Repository<Note> Notes
+        public IRepository<Note> Notes
         {
             get
             {
                 return _unitOfWork.GetRepository<Note>();
             }
         }
-
+           
         #endregion
 
         #region Methods

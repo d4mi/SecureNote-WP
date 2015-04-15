@@ -23,9 +23,9 @@ namespace SecureNote.Desktop.ViewModel
         #region Ctor
         public NotesCatalogViewModel(DatabaseUnitOfWork db)
         {
-            List<Note> notes = db.Notes.ToList();
+            List<Note> notes = db.Notes.GetAll().ToList();
             _notes = new ObservableCollection<Note>(notes);
-            //notes.Add(new Note { Title = "dodane" });
+            //db.Notes.Add(new Note { Title = "dodane" });
             //db.SubmitChanges();
         }
 

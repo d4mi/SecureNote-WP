@@ -19,6 +19,16 @@ namespace SecureNote.Desktop.ViewModel
 
         private Note _note = new Note();
         private NoteTypeToString _noteTypeToString = new NoteTypeToString();
+        private DatabaseUnitOfWork _database;
+
+        #endregion
+
+        #region Ctor
+
+        public NoteEditViewModel(DatabaseUnitOfWork database)
+        {
+            _database = database;
+        }
 
         #endregion
 
@@ -79,7 +89,8 @@ namespace SecureNote.Desktop.ViewModel
                         _addNoteCommand = new RelayCommand(
                             () => 
                             {
-                                _note = new Note();
+                                _database.Notes.Add(_note);
+                                _note = new Note();                                
                             },
                             null
                         )

@@ -30,11 +30,14 @@ namespace SecureNote.DAL
 
         #region IUnitOfWork
 
-        public Repository<T> GetRepository<T>() where T : class, new()
+        public IRepository<T> GetRepository<T>() where T : class, new()
         {
-            IEnumerable<T> table = _database.Query<T>("select * from Note");
+            return new SQLiteRepository<T>(_database);
+        }
 
-            return new SQLiteRepository<T>(table);
+        public int Insert<T>(T obj) where T : class, new()
+        {
+            return _database.Insert(obj);
         }
 
         public void SubmitChanges()

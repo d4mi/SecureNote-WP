@@ -2,6 +2,8 @@
 using Microsoft.Practices.ServiceLocation;
 using SecureNote.DAL;
 using SecureNote.Desktop.ViewModel;
+using SecureNote.Service.Implementation;
+using SecureNote.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,7 @@ namespace SecureNote.Desktop.Utils
         static ViewModelLocator()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-            SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<MainWindowViewModel>();
             SimpleIoc.Default.Register<NoteEditViewModel>();
             SimpleIoc.Default.Register<NotesCatalogViewModel>();
             SimpleIoc.Default.Register<PagePasswordsViewModel>();
@@ -23,17 +25,22 @@ namespace SecureNote.Desktop.Utils
             SimpleIoc.Default.Register<SettingsViewModel>();
             SimpleIoc.Default.Register<AddDocumentViewModel>();
             SimpleIoc.Default.Register<CreditCardInfoViewModel>();
-            SimpleIoc.Default.Register<IUnitOfWork ,SQLiteDatabaseAccessor>();
+            SimpleIoc.Default.Register<LoginViewModel>();
+            SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<SignUpViewModel>();
+
+            SimpleIoc.Default.Register<IFileBrowserDialog, FileBrowserDialog>();
+            SimpleIoc.Default.Register<IUnitOfWork, SQLiteDatabaseAccessor>();
             SimpleIoc.Default.Register<DatabaseUnitOfWork>();
         }
 
         #region ViewModels
 
-        public MainViewModel MainViewModel
+        public MainWindowViewModel MainWindowViewModel
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<MainViewModel>();
+                return ServiceLocator.Current.GetInstance<MainWindowViewModel>();
             }
         }
 
@@ -90,6 +97,30 @@ namespace SecureNote.Desktop.Utils
             get
             {
                 return ServiceLocator.Current.GetInstance<CreditCardInfoViewModel>();
+            }
+        }
+
+        public LoginViewModel LoginViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<LoginViewModel>();
+            }
+        }
+
+        public MainViewModel MainViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MainViewModel>();
+            }
+        }
+
+        public SignUpViewModel SignUpViewModel
+        {
+            get 
+            {
+                return ServiceLocator.Current.GetInstance<SignUpViewModel>();
             }
         }
 

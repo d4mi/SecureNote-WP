@@ -1,13 +1,15 @@
 ﻿using GalaSoft.MvvmLight;
 using SecureNote.Desktop.Utils;
+using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SecureNote.Desktop.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-
         #region Fields
 
         private List<ViewEntry> _views = new List<ViewEntry>();
@@ -19,6 +21,7 @@ namespace SecureNote.Desktop.ViewModel
         private readonly CreditCardInfoViewModel _creditCardInfoViewModel;
         private readonly PagePasswordsViewModel _pagePasswordsViewModel;
         private readonly SettingsViewModel _settingsViewModel;
+        private readonly LoginViewModel _loginViewModel;
 
         private ViewModelBase _currentViewModel;
         private ViewEntry _selectedView;
@@ -26,6 +29,7 @@ namespace SecureNote.Desktop.ViewModel
         #endregion
 
         #region Ctor
+
         public MainViewModel()
         {
             ViewModelLocator viewModelLocator = new ViewModelLocator();
@@ -36,6 +40,7 @@ namespace SecureNote.Desktop.ViewModel
             _creditCardInfoViewModel = viewModelLocator.CreditCardInfoViewModel;
             _pagePasswordsViewModel = viewModelLocator.PagePasswordsViewModel;
             _settingsViewModel = viewModelLocator.SettingsViewModel;
+            _loginViewModel = viewModelLocator.LoginViewModel;
 
             _currentViewModel = _noteCatalogViewModel;
 
@@ -53,12 +58,8 @@ namespace SecureNote.Desktop.ViewModel
             _views.Add(new ViewEntry("Passwords", "/Images/browsePasswordsDark.png", _pagePasswordsViewModel));
             _views.Add(new ViewEntry("Calendar", "/Images/calendarDark.png", _pagePasswordsViewModel));
             _views.Add(new ViewEntry("Photos", "/Images/photosDark.png", _pagePasswordsViewModel));
+            _views.Add(new ViewEntry("Login", "/Images/photosDark.png", _loginViewModel));
         }
-
-        #endregion
-
-        #region Methods
-
 
         #endregion
 
@@ -82,7 +83,7 @@ namespace SecureNote.Desktop.ViewModel
 
             set
             {
-                if( _selectedView != value )
+                if (_selectedView != value)
                 {
                     _selectedView = value;
                     CurrentViewModel = _selectedView.ViewModelBase;
@@ -99,7 +100,7 @@ namespace SecureNote.Desktop.ViewModel
             }
             set
             {
-                if( _currentViewModel != value )
+                if (_currentViewModel != value)
                 {
                     _currentViewModel = value;
                     base.RaisePropertyChanged(() => CurrentViewModel);
@@ -108,5 +109,6 @@ namespace SecureNote.Desktop.ViewModel
         }
 
         #endregion
+
     }
 }
