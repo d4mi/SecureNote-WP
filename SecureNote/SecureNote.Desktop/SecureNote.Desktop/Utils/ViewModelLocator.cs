@@ -28,10 +28,11 @@ namespace SecureNote.Desktop.Utils
             SimpleIoc.Default.Register<LoginViewModel>();
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<SignUpViewModel>();
+            SimpleIoc.Default.Register<DatabaseUnitOfWork>();
 
             SimpleIoc.Default.Register<IFileBrowserDialog, FileBrowserDialog>();
             SimpleIoc.Default.Register<IUnitOfWork, SQLiteDatabaseAccessor>();
-            SimpleIoc.Default.Register<DatabaseUnitOfWork>();
+
         }
 
         #region ViewModels

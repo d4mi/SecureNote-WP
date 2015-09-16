@@ -7,7 +7,7 @@
         mc:Ignorable="d ignore"
         DataContext="{Binding NoteEditViewModel, Source={StaticResource Locator}}"
         >
-    <Grid>
+    <Grid Margin="10,10,30,10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
@@ -16,20 +16,21 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Content="Title" Margin="1" />
         <TextBox Grid.Row="0" Grid.Column="1" Margin="1" />
 
         <Label Grid.Row="1" Grid.Column="0" Content="Content" Margin="1" />
-        <TextBox Grid.Row="1" Grid.Column="1" Margin="1" />
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="1"
+                 TextWrapping="Wrap" AcceptsReturn="True" Height="200"/>
 
         <Label Grid.Row="2" Grid.Column="0" Content="Category" Margin="1" />
         <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding NoteTypes}" Margin="1" />
 
-        <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="1" >
+        <Grid Grid.Row="4" Grid.ColumnSpan="2" Margin="1" >
             <Button Content="Add" Command="{Binding AddNoteCommand}" />
         </Grid>
         

@@ -108,7 +108,7 @@ namespace SecureNote.Desktop.ViewModel
 
                 if( Login == String.Empty )
                 {
-                    PublishErrorMessage("Passwords must match.");
+                    PublishErrorMessage("Login cannot be empty.");
                 }
             }
         }

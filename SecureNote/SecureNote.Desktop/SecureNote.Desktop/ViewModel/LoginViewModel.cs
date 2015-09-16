@@ -60,7 +60,7 @@ namespace SecureNote.Desktop.ViewModel
                         new RelayCommand<PasswordBox>(
                             (passwordBox) =>
                             {
-                                System.Windows.MessageBox.Show(passwordBox.Password);
+                                string pass = passwordBox.Password;
                                 if( UserSignedInEvent != null )
                                 {
                                     UserSignedInEvent(this, null);

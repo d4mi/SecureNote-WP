@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecureNote.View.AddUserView">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    
+    <Label Grid.Row="1" Text="Login" />
+    <Entry Grid.Row="2" Text="{Binding Name}" />
+    <Label Grid.Row="3" Text="Password" />
+    <Entry Grid.Row="4" Text="{Binding Password}" />
+    <Label Grid.Row="5" Text="Email" />
+    <Entry Grid.Row="6" Text="{Binding Email}" />
+
+    <Button Grid.Row="7" Text="Sign in" />
+    <Button Grid.Row="8" Text="Cancel" Command="{Binding CancelCommand}" />
+    
+
+  </Grid>
+</ContentPage>

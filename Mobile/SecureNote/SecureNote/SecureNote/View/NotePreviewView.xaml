@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecureNote.View.NotePreviewView">
+
+  <Grid Padding="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Label Grid.Row="0" Text="{Binding Note.Title}" FontAttributes="Bold" FontSize="40" />
+
+    <Label Grid.Row="1" Text="{Binding Note.Text}" />
+   
+
+    <Grid Grid.Row="3" Padding="0,0,0,0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Button Grid.Column="0" Text="Show" />
+      <Button Grid.Column="1" Text="Cancel" />
+    </Grid>
+
+
+  </Grid>
+
+</ContentPage>

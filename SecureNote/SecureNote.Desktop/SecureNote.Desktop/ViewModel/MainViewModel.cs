@@ -42,7 +42,7 @@ namespace SecureNote.Desktop.ViewModel
             _settingsViewModel = viewModelLocator.SettingsViewModel;
             _loginViewModel = viewModelLocator.LoginViewModel;
 
-            _currentViewModel = _noteCatalogViewModel;
+            CurrentViewModel = _noteCatalogViewModel;
 
             RegisterViews();
         }

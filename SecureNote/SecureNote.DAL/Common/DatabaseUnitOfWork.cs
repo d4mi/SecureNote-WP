@@ -20,7 +20,15 @@ namespace SecureNote.DAL
         public DatabaseUnitOfWork(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+           
         }
+
+        private void SetConnectionString()
+        {
+            _unitOfWork.SetConnectionString("db.txt");
+        }
+
+
 
         #endregion
 
@@ -31,6 +39,14 @@ namespace SecureNote.DAL
             get
             {
                 return _unitOfWork.GetRepository<Note>();
+            }
+        }
+
+        public IRepository<User> Users
+        {
+            get
+            {
+                return _unitOfWork.GetRepository<User>();
             }
         }
            

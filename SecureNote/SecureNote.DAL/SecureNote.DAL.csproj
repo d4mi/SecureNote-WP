@@ -68,6 +68,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ConnectionFactory.cs" />
     <Compile Include="Common\DatabaseUnitOfWork.cs" />
     <Compile Include="Common\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

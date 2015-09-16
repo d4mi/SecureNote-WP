@@ -9,6 +9,7 @@ namespace SecureNote.Model.Model
 {
     public class Page
     {
+
         public string Name { get; set; }
         public string Password { get; set; }
         public string Url { get; set; }

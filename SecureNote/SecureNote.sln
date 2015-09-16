@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureNote.DAL", "SecureNot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureNote.Service", "SecureNote.Service\SecureNote.Service.csproj", "{464547AA-9B3D-452F-8B09-EC4F48C3826D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureNote.Android", "SecureNote.Android\SecureNote.Android.csproj", "{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +90,16 @@ Global
 		{464547AA-9B3D-452F-8B09-EC4F48C3826D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{464547AA-9B3D-452F-8B09-EC4F48C3826D}.Release|ARM.ActiveCfg = Release|Any CPU
 		{464547AA-9B3D-452F-8B09-EC4F48C3826D}.Release|x86.ActiveCfg = Release|Any CPU
+		{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}.Release|ARM.ActiveCfg = Release|Any CPU
+		{5FC7AAC9-5F1B-4AB1-A44D-44D67E50D129}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

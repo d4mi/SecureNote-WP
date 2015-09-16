@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecureNote.View.DocumentPreviewView">
+
+  <Grid Padding="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    
+    <Image Grid.Row="0" Source="{Binding Document.ImagePath}" WidthRequest="420" HeightRequest="420"/>
+    
+    <Grid Grid.Row="2">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+
+      <Label Grid.Row="0" Grid.Column="0" Text="Name:" />
+      <Label Grid.Row="0" Grid.Column="1" Text="{Binding Document.Name}" />
+
+      <Label Grid.Row="1" Grid.Column="0" Text="Description:" />
+      <Label Grid.Row="1" Grid.Column="1" Text="{Binding Document.Description}" />
+      
+      <Label Grid.Row="2" Grid.Column="0" Text="Date created:" />
+      <Label Grid.Row="2" Grid.Column="1" Text="{Binding Document.Created}" />
+
+    </Grid>
+
+
+    <Grid Grid.Row="3" Padding="0,0,0,0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Button Grid.Column="0" Text="Show" />
+      <Button Grid.Column="1" Text="Cancel" Command="{Binding CancelCommand}" />
+    </Grid>
+
+ 
+  </Grid>  
+</ContentPage>

@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using SecureNote.DAL;
 using SecureNote.Model.Model;
 using SecureNote.Service.Implementation;
 using System;
@@ -15,6 +16,7 @@ namespace SecureNote.Desktop.ViewModel
         #region Fields
 
         private SecureNote.Model.Model.Page _page = new SecureNote.Model.Model.Page();
+        //private readonly DatabaseUnitOfWork _database;
 
         #endregion
 
@@ -22,8 +24,9 @@ namespace SecureNote.Desktop.ViewModel
 
         public AddWebPageViewModel()
         {
-            WebsiteScreenshot w = new WebsiteScreenshot();
-            Thumb = w.GetPage("");
+
+
+           // _database = db;
         }
        
         #endregion
@@ -77,8 +80,6 @@ namespace SecureNote.Desktop.ViewModel
                 }
             }
         }
-
-
 
         #endregion
 

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecureNote.View.LoginView">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+
+    <Image Grid.Row="1" Source="Images/note.png" />
+    
+    <Grid Grid.Row="2" >
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <Label Grid.Row="0" Text="Login" />
+      <Entry Grid.Row="1" Text="{Binding UserName}"/>
+
+      <Label Grid.Row="2" Text="Pasword" />
+      <Entry Grid.Row="3" IsPassword="True" Text="{Binding Password}"/>
+
+      <Button Grid.Row="4" Text="Login" Command="{Binding LoginClickedCommand}" />
+      <Button Grid.Row="5" Text="Sign in" Command="{Binding SignInCommand}" />
+
+    </Grid>
+    
+  </Grid>
+  
+
+</ContentPage>

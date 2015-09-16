@@ -21,7 +21,15 @@ namespace SecureNote.DAL
 
         public SQLiteDatabaseAccessor()
         {
-            _database = new SQLiteConnection("data.db");
+ 
+        }
+
+        #endregion
+
+        #region Methods
+
+        void CreateTables()
+        {
             _database.CreateTable<Note>();
         }
 
@@ -29,6 +37,12 @@ namespace SecureNote.DAL
 
 
         #region IUnitOfWork
+
+        public void SetConnectionString(string connectionString)
+        {
+            _database = new SQLiteConnection(connectionString);
+            CreateTables();
+        }
 
         public IRepository<T> GetRepository<T>() where T : class, new()
         {
